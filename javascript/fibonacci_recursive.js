@@ -1,5 +1,18 @@
 function fibonacci(n) {
-  // type your code here
+  
+  if (n < 2){
+    return n
+  }
+
+  const fibonacci = [0,1]
+
+  
+  for(let i = 0; i < n-1; i++){
+    fibonacci.push(fibonacci[fibonacci.length-1] + fibonacci[fibonacci.length-2])
+  }
+
+  return fibonacci[n]
+   
 }
 
 if (require.main === module) {
